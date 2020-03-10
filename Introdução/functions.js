@@ -48,3 +48,5 @@ function enviaMensagem(media, turma){
 
 enviaMensagem(media1.toFixed(2), 'Turma A');
 enviaMensagem(media2.toFixed(2), 'Turma B');
+
+console.log()
