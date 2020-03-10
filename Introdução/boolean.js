@@ -41,11 +41,6 @@ const alunosTurmaB = [
 ]
 
 
-// Marcar aluno como reprovado se a nota for menor que 6
-
-// console.log(alunosTurmaA[0].reprovado)
-
-
 function marcarComoReprovado(aluno){
     aluno.reprovado = false;
     if (aluno.nota < 6){
