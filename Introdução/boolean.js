@@ -21,20 +21,51 @@ const alunosTurmaA = [
     }
 ]
 
+const alunosTurmaB = [
+    {
+        nome: "Fernando",
+        nota: 4.0
+    },
+    {
+        nome: "Fernanda",
+        nota: 2.0 
+    },
+    {
+        nome: "Ana Maria",
+        nota: 9.4
+    },
+    {
+        nome: "Carlos Alberto",
+        nota: 6.7
+    }
+]
+
 
 // Marcar aluno como reprovado se a nota for menor que 6
 
 // console.log(alunosTurmaA[0].reprovado)
 
 
-function marcarComoReprovado(alunos){
-    for (let aluno of alunos){
-        aluno.reprovado = false;
-        if (aluno.nota < 6){
-            aluno.reprovado = true;
-        }
+function marcarComoReprovado(aluno){
+    aluno.reprovado = false;
+    if (aluno.nota < 6){
+        aluno.reprovado = true;
     }
-    console.table(alunos);
 }
 
-marcarComoReprovado(alunosTurmaA);
+
+function enviarMensagemReprovado(aluno){
+    if(aluno.reprovado){
+        console.log(`O aluno ${aluno.nome} está reprovado!`)
+    }
+}
+
+function alunoReprovado(alunos){
+    for (let aluno of alunos){
+      marcarComoReprovado(aluno);
+      enviarMensagemReprovado(aluno);
+    }
+}
+
+alunoReprovado(alunosTurmaA);
+alunoReprovado(alunosTurmaB);
