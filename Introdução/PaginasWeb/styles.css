@@ -163,3 +163,27 @@ header div {
     visibility: visible;
     
 }
+
+/* == CSS FORMACAO */
+
+.formacao{
+    padding: 20px;
+    text-align: center;
+}
+
+.formacao-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.texto-formacao{
+    padding: 30px;
+    text-align: justify;
+}
+
+.formacao h1{
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: var(--color-green);
+}
+
