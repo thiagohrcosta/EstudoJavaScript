@@ -187,3 +187,12 @@ header div {
     color: var(--color-green);
 }
 
+/* IFRAME */
+
+iframe{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+
+}
