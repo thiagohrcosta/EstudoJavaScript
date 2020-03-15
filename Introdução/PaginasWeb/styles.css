@@ -135,6 +135,7 @@ header div {
     height: 100%;
     position: fixed;
     top: 0;
+    opacity: 0;
 }
 
 .modal {
@@ -152,4 +153,12 @@ header div {
     top: 8px;
     cursor: pointer;
 
+}
+
+/* == Modal.active == */
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+    
 }
