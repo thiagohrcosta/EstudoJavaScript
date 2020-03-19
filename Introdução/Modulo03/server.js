@@ -2,7 +2,7 @@ const express = require("express");
 const server = express();
 
 server.get("/", function(req, res){
-    return res.send("Olá!")
+    return res.send("Olá! Usando NODEMON")
 } )
 
 server.listen(5000, function(){
