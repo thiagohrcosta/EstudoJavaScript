@@ -2,62 +2,39 @@
 
 {% block head %}
 
-<title>Courses - Thiago Costa </title>
+    <title>Courses - Thiago Costa
+    </title>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 {% endblock %}
 
 {% block content %}
 
-<div id="wrapper">
-    <h1>Specialization Courses</h1>
-</div>
-
-<section class="cards">
-    <div class="card" id="lFpcZKBUiSY">
-        <div class="card__image-container">
-            <img src="img/ibm.png" alt="Vídeo Aula">
-            <div class="card__content">
-                <p>Professional Certificate in Data Science - IBM</p>
-                <br>
-            </div>
-            <div class="card__info">
-                <p>In course(7/9)</p>
-                <p class="card__price">Free</p>
-            </div>
-        </div>
+    <div id="wrapper">
+        <h1>Specialization Courses</h1>
     </div>
 
-    <div class="card" id="UMichigan">
-        <div class="card__image-container">
-            <img src="img/uMichigan.png" alt="Vídeo Aula">
-            <div class="card__content">
-                <p>Specialization - Applied Data Science with Python - The University of Michigan</p>
-            </div>
-            <div class="card__info">
-                <p>In course(7/9)</p>
-                <p class="card__price">Free</p>
-            </div>
-        </div>
-    </div>
+    <section class="cards">
+        {% for item in items %}
 
-    <div class="card" id="UBritishColumbia">
-        <div class="card__image-container">
-            <img src="img/britishColumbia.png" alt="Vídeo Aula">
-            <div class="card__content">
-                <p>MicroMasters - Software Development - The University of British Columbia</p>
+            <div class="card" id="{{item.id}}">
+                <div class="card__image-container">
+                    <img src="img/ibm.png" alt="Image of {{item.title}}">
+                    <div class="card__content">
+                        <p>{{item.title}}</p>
+                        <br>
+                    </div>
+                    <div class="card__info">
+                        <p>{{item.duration}}</p>
+                        <p class="card__price">{{item.price}}</p>
+                    </div>
+                </div>
             </div>
-            <div class="card__info">
-                <p>In course(7/9)</p>
-                <p class="card__price">Free</p>
-            </div>
-        </div>
-    </div>
 
+        {% endfor %}
 
-</section>
-
+    </section>
 
 </section>
 <!-- END OF UDEMY COURSE -->
@@ -74,6 +51,5 @@
 </div>
 
 <script src="scripts.js"></script>
-
 
 {% endblock %}

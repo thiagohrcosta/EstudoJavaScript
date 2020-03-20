@@ -104,6 +104,7 @@ header div {
 
 .card {
     background-color: var(--color-purple);
+    display: grid;
 }
 
 .card__image-container img {
@@ -117,6 +118,7 @@ header div {
 .card__info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .card__price {

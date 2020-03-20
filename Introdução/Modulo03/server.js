@@ -16,8 +16,8 @@ server.get("/", function(req, res){
     return res.render("about")
 })
 
-server.get("/courses", function(req, res){
-    return res.render("courses")
+server.get("/courses", function (req, res) {
+    return res.render("courses", { items: videos })
 })
 
 server.listen(5000, function(){
