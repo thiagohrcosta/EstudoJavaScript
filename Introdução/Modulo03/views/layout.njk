@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        {% block head%}
+            <title>Thiago Costa</title>
+        {% endblock %}
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/styles.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="links">
+                <a href="/">About Me</a>
+                <a href="/courses">My Courses</a>
+
+            </div>
+        </header>
+
+        <!-- usando Nunjucks -->
+
+        {% block content %}{% endblock %}
+
+    </body>
+</html>
