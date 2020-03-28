@@ -196,3 +196,62 @@ iframe{
     top: 5%;
 
 }
+
+iframeProject{
+  background-color: red;
+
+}
+
+/* PROJECTS */
+
+#projects {
+    text-align: center;
+    padding: 32px 0;
+}
+
+.modal-project{
+    background-color: red;
+
+}
+
+.my-project-img{
+    border: 5px solid var(--color-green);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+.modal-myProject-img{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 5px solid var(--color-green);
+    width: 50%;
+}
+.modal-project {
+    background-color: #282a36;
+    width:  60%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.titulo-Project{
+    font-size: 20px;
+    padding: 40px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.botaoGit{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.goToMyGit{
+    text-decoration: none;
+    color: var(--color-green);
+}
+
+.goToMyGit:hover{
+    text-decoration: none;
+    color: white;
+}

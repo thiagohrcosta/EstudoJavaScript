@@ -19,5 +19,23 @@ document.querySelector('.close-modal').addEventListener("click", function(){
 })
 
 
+// Porfolio Scripts
 
+
+const portfolio = document.querySelectorAll('.myProjectBox');
+
+for (let myProjectBox of portfolio){
+    myProjectBox.addEventListener("click", function(){
+        const projectId = myProjectBox.getAttribute("");
+        modalOverlay.classList.add('active')
+        modalOverlay.querySelector("iframe").src="";
+        
+    })
+}
+
+document.querySelector('.close-modal1').addEventListener("click", function(){
+    modalOverlay.classList.remove("active");
+    modalOverlay.querySelector("iframe").src="";
+    
+})
 
