@@ -1,21 +1,20 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <title>About - Thiago Costa</title>
+    <title>About - {{ about.name }}</title>
 {% endblock %}
 
 {% block content %}
 
     <div id="wrapper">
-        <img src="https://avatars3.githubusercontent.com/u/28869405?s=460&v=4" alt="Thiago Costa">
-        <h1>Thiago Costa</h1>
-        <h2>Full Stack Developer, passionate about Data Science.
-        </h2>
-        <p>Systems analyst, with ongoing MBA in BIG DATA and competitive intelligence. Professional refresher courses in Data Science certified by IBM and Michigan University and Software Developer by The University of British Columbia.</div>
-
+        <img src="{{ about.avatar_url }}" alt="{{ about.name }}">
+        <h1>{{about.name}}</h1>
+        <h2>{{about.role}}</h2>
+        <p>{{about.description}}</p>
         <div id="links-footer" class="links">
-            <a href="https://github.com/thiagohrcosta" target="_blank">Github</a>
-            <a href="https://github.com/thiagohrcosta" target="_blank">Linkedin</a>
+        {% for link in about.links %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+            {% endfor %}
         </div>
 
 {% endblock %}

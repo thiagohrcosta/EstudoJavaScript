@@ -4,16 +4,29 @@ const nunjucks = require("nunjucks")
 const server = express();
 const videos = require("./data");
 
-server.use(express.static("public"))
+server.use(express.static("public"));
 
-server.set("view engine", "njk")
+server.set("view engine", "njk");
 
 nunjucks.configure("views", {
-    express: server
+    express: server,
+    autoescape: false,
 })
 
 server.get("/", function(req, res){
-    return res.render("about")
+    const about = {
+        avatar_url: "https://avatars3.githubusercontent.com/u/28869405?s=460&v=4",
+        name: "Thiago Costa",
+        role: "Full Stack Developer, passionate about Data Science",
+        description: 'Systems analyst, with ongoing MBA in BIG DATA and competitive intelligence. Professional refresher courses in Data Science certified by IBM and Michigan University and Software Developer by The University of British Columbia.',
+        links: [
+            { name: "Github", url: "https://github.com/thiagohrcosta"},
+            { name: "Likendin", url: "https://github.com/thiagohrcosta"},
+        ]
+
+    }
+
+    return res.render("about", { about });
 })
 
 server.get("/courses", function (req, res) {
