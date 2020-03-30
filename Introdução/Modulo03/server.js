@@ -34,6 +34,24 @@ server.get("/courses", function (req, res) {
     return res.render("courses", { items: videos })
 })
 
+server.get("/video", function(req, res){
+    const id = req.query.id;
+
+    const video = videos.find(function(){
+        if (video.id == id){
+            return true;
+        }
+    })
+
+    if (!video){
+        return res.send("Video not fount!")
+    }
+
+    return res.render("video", { video })
+
+    res.send(id);
+})
+
 server.listen(5000, function(){
     console.log("Server is running on port 5000.")
 });
