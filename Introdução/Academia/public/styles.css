@@ -63,3 +63,28 @@ header{
     width: 100%;
     transition: width 700ms ease-in-out;
 }
+
+
+/* === Card === */
+
+.avatar{
+    width: 400px;
+    height: 400px;
+}
+.card{
+    background-color :white;
+    width: 800px;
+    height: 400px;
+
+    /* espaçamento e alinhamento ao centro */
+    margin: 45px auto;
+
+    /* Grid dividido ao meio */ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* Sombra do box */
+    box-shadow: 0px 10px 6px -2px rgba(0,0,0, 0.4);
+
+
+}
