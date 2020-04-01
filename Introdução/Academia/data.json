@@ -1,4 +1,13 @@
 {
   "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://bing.com.br",
+      "name": "Thiago Costa",
+      "birth": 532656000000,
+      "gender": "M",
+      "services": "Aikido, Judo",
+      "created_at": 1585764567869
+    }
   ]
 }
