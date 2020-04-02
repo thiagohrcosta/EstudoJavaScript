@@ -24,7 +24,6 @@ exports.show = function(req, res){
 
 }
 
-
 // Create
 exports.post = function(req, res){
 
@@ -63,6 +62,21 @@ exports.post = function(req, res){
         // return res.send(req.body)
     
 }
+
+// Edit
+exports.edit = function(req, res){
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return id == instructor.id
+    })
+
+    if (!foundInstructor) return res.send("Instrutor não localizado")
+
+
+    return res.render("instructors/edit", {instructor: data})
+}
+
 
 // update
 
