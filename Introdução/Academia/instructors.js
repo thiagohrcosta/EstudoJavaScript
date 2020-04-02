@@ -1,5 +1,6 @@
 const fs = require("fs");
 const data = require("./data.json");
+const { age } = require("./utils");
 
 // Show
 
@@ -12,31 +13,14 @@ exports.show = function(req, res){
 
     if (!foundInstructor) return res.send("Instrutor não localizado");
 
-    function age(timestamp){
-        const today = new Date();
-        const birthDate = new Date(timestamp);
-
-        let age = today.getFullYear() - birthDate.getFullYear();
-
-        const month = today.getMonth() - birthDate.getMonth();
-
-        if (month < 0 ){
-            age = age - 1;
-        }
-
-        // const day = today.getDay - birthDate.getDay();
-
-    } 
-
     const instructor = {
         ...foundInstructor,
         age: age(foundInstructor.birth),
-        gender: "",
         services: foundInstructor.services.split(","),
-        created_at: ""
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
     }
 
-    return res.render("instructors/show", { instructor : foundInstructor});
+    return res.render("instructors/show", { instructor });
 
 }
 
