@@ -2,15 +2,6 @@
   "instructors": [
     {
       "id": 1,
-      "avatar_url": "https://source.unsplash.com/collection/2265783/500x500",
-      "name": "Thiago Costa",
-      "birth": 532656000000,
-      "gender": "M",
-      "services": "Aikido, Judo, Karate",
-      "created_at": 1585839772106
-    },
-    {
-      "id": 2,
       "avatar_url": "https://source.unsplash.com/collection/4130984/500x500",
       "name": "Ana Paula ",
       "birth": 971136000000,
@@ -19,7 +10,7 @@
       "created_at": 1585847364511
     },
     {
-      "id": "3",
+      "id": "2",
       "avatar_url": "https://source.unsplash.com/collection/1647783/500x500",
       "name": "Christina Yang",
       "birth": 160444800000,
