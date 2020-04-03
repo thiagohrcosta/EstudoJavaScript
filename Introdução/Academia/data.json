@@ -3,14 +3,14 @@
     {
       "id": 1,
       "avatar_url": "https://source.unsplash.com/collection/4130984/500x500",
-      "name": "Ana Paula ",
-      "birth": 971136000000,
-      "gender": "F",
-      "services": "Musculação, Crossfit, Dança",
+      "name": "Arnold Schwarzenegger ",
+      "birth": -741312000000,
+      "gender": "M",
+      "services": "Musculação, Crossfit",
       "created_at": 1585847364511
     },
     {
-      "id": "2",
+      "id": 2,
       "avatar_url": "https://source.unsplash.com/collection/1647783/500x500",
       "name": "Christina Yang",
       "birth": 160444800000,
@@ -20,12 +20,21 @@
     },
     {
       "id": 3,
-      "avatar_url": "https://source.unsplash.com/collections/6800490/500x500",
+      "avatar_url": "https://source.unsplash.com/collection/1647783/500x500",
       "name": "Sylverster Stallone",
       "birth": -741312000000,
       "gender": "M",
       "services": " Boxe, Musculação",
       "created_at": 1585942983094
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://br.web.img3.acsta.net/pictures/18/07/26/20/59/1349875.jpg",
+      "name": "Bruce Willis",
+      "birth": -466732800000,
+      "gender": "M",
+      "services": " MMA, Krav Maga, Defesa pessoal",
+      "created_at": 1585944203476
     }
   ]
 }
