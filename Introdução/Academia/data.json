@@ -17,6 +17,15 @@
       "gender": "F",
       "services": " Yoga, Tai Chi, Pilates ",
       "created_at": 1585851067179
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://source.unsplash.com/collections/6800490/500x500",
+      "name": "Sylverster Stallone",
+      "birth": -741312000000,
+      "gender": "M",
+      "services": " Boxe, Musculação",
+      "created_at": 1585942983094
     }
   ]
 }
