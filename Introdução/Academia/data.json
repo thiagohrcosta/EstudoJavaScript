@@ -1,4 +1,7 @@
 {
+  "members": [
+
+  ],
   "instructors": [
     {
       "id": 1,
@@ -33,8 +36,17 @@
       "name": "Bruce Willis",
       "birth": -466732800000,
       "gender": "M",
-      "services": " MMA, Krav Maga, Defesa pessoal",
+      "services": " Krav Maga, Defesa pessoal",
       "created_at": 1585944203476
+    },
+    {
+      "id": 5,
+      "avatar_url": "https://sedmicka.tyden.cz/obrazek/201407/53b5c9709960f/img-3134-fotor-53b5cb8844c52_630x942.jpg",
+      "name": "Steven Seagal",
+      "birth": -559440000000,
+      "gender": "M",
+      "services": " Aikido",
+      "created_at": 1585946648134
     }
   ]
 }
