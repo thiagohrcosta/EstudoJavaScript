@@ -3,13 +3,14 @@
 {% block content %}
 
 <div class="card table-container">
-    
+    <a href="/instructors/create">Cadastrar</a>
+
     <table width="100%">
         <thead>
             <tr>
-                <th>Instructor</th>
-                <th>Atendimento</th>
-                <th>Ação</th>
+                <th>Instrutor</th>
+                <th>Serviços</th>
+                <th>Informações</th>
 
             </tr>
         </thead>
@@ -20,8 +21,8 @@
                 <td>
                     <span style="background-image: url({{ instructor.avatar_url}})">
                     </span>
+                    {{instructor.name}}
                 </td>
-                <td>{{instructor.name}}</td>
                 <td>{{instructor.services}}</td>
                 <td><a href="instructors/{{instructor.id}}">Acessar</a></td>
             </tr>
