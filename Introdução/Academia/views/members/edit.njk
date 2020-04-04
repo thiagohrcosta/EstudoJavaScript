@@ -24,17 +24,7 @@
                 <button type="submit">Deletar</button>
             </form>
 
-            <script>
-            
-                const formDelete = document.querySelector("#form-delete")
-                formDelete.addEventListener("submit", function(event){
-                    const confirmation = confirm("Deseja realmente deletar?")
-                    if(!confirmation) {
-                        event.preventDefault()
-                    }                
-                })
-
-            </script>
+            {% include 'members/deleteConfirmation.njk' %}
 
         </section>
 
