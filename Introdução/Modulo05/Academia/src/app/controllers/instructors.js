@@ -18,7 +18,7 @@ module.exports = {
             }
         }
 
-        let {avatar_url, birth, name, services, gender} = req.body
+  
 
        
         return
