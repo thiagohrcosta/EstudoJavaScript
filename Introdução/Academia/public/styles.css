@@ -27,6 +27,13 @@ header{
     box-sizing: border-box ;
 }
 
+.gym-title{
+    color: var(--primary-color);
+    font-size: 36px;
+    padding-bottom: 5px;
+
+}
+
 .links {
     font-size: 22px;   
 }
@@ -159,7 +166,7 @@ header{
 
 /* FORM */
 
-input {
+input, select {
     width: 100%;
     outline: none;
     color: #555;
