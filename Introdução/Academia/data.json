@@ -1,6 +1,16 @@
 {
   "members": [
-
+    {
+      "avatar_url": "https://s2.best-wallpaper.net/wallpaper/iphone/1811/2018-movie-Creed-II_iphone_1080x1920.jpg",
+      "name": "Adonis Creed",
+      "email": "adoniscreed@creed.com",
+      "birth": 539827200000,
+      "gender": "M",
+      "blood": "A+",
+      "weight": "80",
+      "height": "183",
+      "id": 1
+    }
   ],
   "instructors": [
     {
