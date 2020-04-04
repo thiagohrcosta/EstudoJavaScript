@@ -1,8 +1,9 @@
 const { age, date } = require("../../lib/utils");
+const db = require('../../config/db');
 
 module.exports = {
     index(req, res){
-        return res.render("instructors/index", { instructors })
+        return res.render("instructors/index")
  
     },
     create(req, res){
@@ -33,16 +34,17 @@ module.exports = {
             req.body.name,
             req.body.avatar_url,
             req.body.gender,
-            req.body.service,
+            req.body.services,
             date(req.body.birth).iso,
             date(Date.now()).iso
 
-
-
-
         ]
        
-        return
+        db.query(query, values, function(err, results){
+            console.log(err)
+            console.log(results)
+                    })
+        
     
     },
     show(req, res){
