@@ -69,7 +69,7 @@ module.exports = {
     },
     delete(req, res){
         Member.delete(req.body, function(){
-            return res.redirect(`/members/${req.body.id}`)
+            return res.redirect(`/members/`)
         })
 
     },
