@@ -40,3 +40,4 @@ Foi utilizado na presente aplicação o seguinte:
  - [Pg](https://www.npmjs.com/package/pg)
  - [Browser-sync](https://www.npmjs.com/package/browser-sync)
  - [Npm-run-all](https://www.npmjs.com/package/npm-run-all)
+ - [PostgreSQL](https://www.postgresql.org/)
