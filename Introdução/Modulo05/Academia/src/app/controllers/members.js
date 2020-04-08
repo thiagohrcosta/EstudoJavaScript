@@ -82,10 +82,10 @@ module.exports = {
       return res.redirect(`/members/${req.body.id}`);
     });
   },
-  delete(req, res) {
-    Member.delete(req.body, function () {
-      return res.redirect(`/members/`);
-    });
+  delete(req, res){
+    Member.delete(req.body.id, function(){
+      return res.redirect(`/members`)
+    })
   },
 
   paginate(params) {
