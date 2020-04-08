@@ -1,15 +1,34 @@
 const { age, date } = require("../../lib/utils");
 
-
 const Member = require("../models/Member");
 
 module.exports = {
     index(req, res){
 
-        Member.all(function(members){
-            return res.render("members/index", { members })
+        let { filter, page, limit } = req.query;
 
-        })       
+        page = page || 1;
+        limit = limit || 2;
+        let offset = limit * (page - 1);
+    
+        const params = {
+          filter,
+          page,
+          limit,
+          offset,
+          callback(members) {
+            const pagination = {
+              total: Math.ceil(members[0].total / limit),
+              page,
+            };
+            return res.render("members/index", {
+              members,
+              pagination,
+              filter,
+            });
+          },
+        };
+        Member.paginate(params);  
  
     },
     create(req, res){
@@ -78,6 +97,40 @@ module.exports = {
         })
 
     },
+
+    paginate(params) {
+        const { filter, limit, offset, callback } = params;
+    
+        let query = "",
+          filterQuery = "",
+          totalQuery = `(
+                    SELECT count(*) FROM members
+                ) AS total`;
+    
+        if (filter) {
+          filterQuery = `
+                WHERE members.name ILIKE '%${filter}%'
+                OR members.email ILIKE '%${filter}%'
+                `;
+    
+          totalQuery = `(
+                    SELECT count(*) FROM members
+                    ${filterQuery}
+                ) as total`;
+        }
+    
+        query =`
+            SELECTmemberss.*, ${totalQuery}
+            FROM instructors
+            ${filterQuery}
+            LIMIT $1 OFFSET $2`
+    
+            db.query(query, [limit, offset], function(err, results){
+                if (err) throw 'Database Error!'
+                
+                callback(results.rows)
+        });
+      },
 
 
         
